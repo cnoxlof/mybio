@@ -195,8 +195,8 @@ canvas {
 
 .landscape {
     display: none;
-
 }
+
 .landscape-msg {
     background-color: var(--background-color-trans);
     border: var(--profile-border);
@@ -214,17 +214,22 @@ canvas {
     .badges {
         padding: 10px 0px;
     }   
+    .landscape {
+        display: none;
+    }
 }
 @media all and (min-width: 530px) and (orientation: portrait) {
     .badge {
         padding: 5px 10px;
     }   
+    .landscape {
+        display: none;
+    }
 }
 
 
 @media all and (max-height: 540px) and (orientation: landscape) {
     .landscape {
-
         display: flex;
         width: 100vw;
         height: 100vh;
