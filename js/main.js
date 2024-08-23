@@ -111,3 +111,15 @@ function drawStars() {
 }
 
 drawStars();
+
+
+
+
+
+// Responsive Scroll Iphone Disable //
+
+
+window.addEventListener("scroll", (e) => {
+  e.preventDefault();
+  window.scrollTo(0, 0);
+});
