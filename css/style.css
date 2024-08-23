@@ -1,1 +1,265 @@
-.vidplayer,.wrapper{justify-content:center}.vidplayer,canvas{z-index:-1;position:absolute}.main,.vidplayer,.wrapper{height:100vh;width:100vw;display:flex}.infos,body{font-family:var(--font)}.badge,.badges,.link-btn,.link-title,.main,.vidplayer,.wrapper{display:flex}.badges,.link-title-container p{color:var(--text-color-dark)}.links button,.links button img{width:64px;height:64px}.badgePopup,.main,.vidplayer,canvas{position:absolute}:root{--background-color:#000;--background-color-light:#111;--text-color-dark:#444;--text-color:#aaa;--profile-border:var(--text-color) solid 2px;--profile-border-thin:var(--text-color) solid 1px;--font:Consolas,Sans-serif;--transision:0.3s}*{margin:0;padding:0}body{background-color:var(--background-color);color:var(--text-color);animation:1s blurStart;overflow:hidden}canvas{animation:1700s linear infinite canvasRot;margin-top:-50vh}.wrapper{align-items:center}.main{align-items:center;justify-content:center}.vidplayer{align-items:center;align-content:center;top:25%}.content{border:var(--profile-border);border-radius:5px;padding:20px;background:#000000cc}.profile .pfp img{width:128px;height:128px;border-radius:50%;border:var(--profile-border)}.profile .profile-container{display:flex;justify-content:center}.badges{padding:20px 10px;justify-content:space-evenly}.badge:hover,.infos{color:var(--text-color)}.badge{background-color:var(--background-color-light);border:var(--profile-border-thin);padding:5px 10px;font-size:14px;border-radius:10px;transition:var(--transision)}.badgePopup,.links button{background-color:var(--background-color);transition:var(--transision)}.link-btn,.link-title{padding-top:10px;justify-content:center}.link-title-container{text-align:center}.link-title-container label{font-size:20px}.links button{border:0;outline:0}.links button:hover{filter:brightness(50%)}.badgePopup{border:var(--profile-border-thin);border-radius:5px;max-width:250px;padding:5px;opacity:1}.badgePopup.hide{opacity:0}@keyframes blurStart{0%{filter:blur(10px)}100%{filter:blur(0px)}}@keyframes canvasRot{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+:root {
+    --background-color : #000;
+    --background-color-light:#111;
+    --background-color-trans : #000000cc;
+    --text-color-dark : #444;
+    --text-color : #aaa;
+
+
+
+    --profile-border:  var(--text-color) solid 2px;
+    --profile-border-thin:  var(--text-color) solid 1px;
+
+    --font: Consolas, Sans-serif;
+
+    --transision : 0.3s
+}
+
+* {
+    margin:0;
+    padding:0;
+}
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font);
+    animation: blurStart 1s ease;
+    overflow: hidden;
+    -webkit-overflow-scrolling: hidden;
+    -ms-overflow-style: none;
+    
+}
+body, html {
+    overflow-x: hidden;
+}
+
+canvas {
+    position: absolute;
+    z-index: -1;
+    animation: canvasRot 1700s linear infinite;
+    margin-top: -50vh;
+}
+
+
+
+
+
+
+
+
+
+.wrapper {
+    overflow: hidden ;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+
+}
+.main {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.vidplayer {
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    top: 25%; /* Position the top edge at the center of the viewport */
+
+}
+
+
+
+.content {
+    border: var(--profile-border);
+    border-radius: 5px;
+    padding: 20px ;
+    
+    background: var(--background-color-trans);
+}
+
+.profile .pfp img{
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    border: var(--profile-border);
+    
+}
+.profile .profile-container     {
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.badges {
+    
+    padding: 20px 10px;
+
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--text-color-dark);
+    
+    
+}
+.badge {
+    background-color: var(--background-color-light);
+    border: var(--profile-border-thin);
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 5px;
+    font-size: 14px;
+    border-radius: 10px;
+    display: flex;
+    transition: var(--transision);
+}
+
+.badge:hover {
+    color: var(--text-color);
+}
+
+.badgePopup {
+    border: var(--profile-border-thin);
+    background-color: var(--background-color);
+    border-radius: 5px;
+    max-width: 250px;
+    padding: 5px;
+    transition: var(--transision);
+    opacity: 1;
+    position: absolute;
+}
+.badgePopup.hide {
+    opacity: 0;
+}
+
+.infos {
+    color: var(--text-color);
+    font-family: var(--font);
+}
+
+
+.link-title {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+.link-title-container {
+    text-align: center;
+}
+
+.link-title-container label {
+    font-size: 20px;
+}
+.link-title-container p {
+    color: var(--text-color-dark);
+}
+
+
+.link-btn {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.links button{
+    background-color: var(--background-color);
+    border: 0;
+    outline: 0;
+    width: 64px;
+    height: 64px;
+    transition: var(--transision);
+}
+.links button img {
+    width: 64px;
+    height: 64px;
+}
+
+
+.links button:hover {
+    filter: brightness(50%);
+}
+
+
+.landscape {
+    display: none;
+
+}
+.landscape-msg {
+    background-color: var(--background-color-trans);
+    border: var(--profile-border);
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+@media all and (max-width: 530px) and (orientation: portrait) {
+    .badge {
+        font-size: 12px;
+        text-align: center;
+        padding: 5px 5px;
+    }   
+    .badges {
+        padding: 10px 0px;
+    }   
+}
+@media all and (min-width: 530px) and (orientation: portrait) {
+    .badge {
+        padding: 5px 10px;
+    }   
+}
+
+
+@media all and (max-height: 540px) and (orientation: landscape) {
+    .landscape {
+
+        display: flex;
+        width: 100vw;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+    }
+    .main {
+        display: none;
+    }
+} 
+
+
+
+
+
+
+/* CSS Animations */
+
+@keyframes blurStart {
+    0% {
+
+        filter: blur(10px);
+    }
+    100% {
+        filter: blur(0px);
+
+    }
+}
+
+@keyframes canvasRot {
+    0% {
+
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+
+    }
+}
