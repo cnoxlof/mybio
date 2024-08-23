@@ -114,9 +114,12 @@ drawStars();
 
 
 
-
-
 // Responsive Scroll Iphone Disable //
+
+/mobile/i.test(navigator.userAgent) && !location.hash && setTimeout(function() {
+  window.scrollTo(0, 1);
+}, 1000);​
+
 
 
 window.addEventListener("scroll", (e) => {
